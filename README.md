@@ -1,62 +1,59 @@
-# 🚀 Recruitin Unified Platform
+# 🏢 S&PS BV - Executive Recruitment Website
 
-**Een moderne, unified recruitment platform met React, TypeScript, Tailwind CSS en React Router**
+**Professionele website voor S&P Services: Sourcing & Procurement Services**
 
-![Recruitin Platform](https://img.shields.io/badge/React-18.3.1-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue) ![Tailwind](https://img.shields.io/badge/Tailwind-4.1-06B6D4)
+![React](https://img.shields.io/badge/React-18.3.1-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue) ![Tailwind](https://img.shields.io/badge/Tailwind-4.1-06B6D4)
 
 ---
 
 ## 📋 **Overzicht**
 
-Dit project combineert drie belangrijke delen van het Recruitin platform:
+Dit is de officiële website van **S&PS BV** (S&P Services), gespecialiseerd in Sourcing & Procurement advies. De website bestaat uit twee hoofdpagina's met de S&PS huisstijl (bruin/blauw kleurenpalet).
 
-1. **Executive Recruitment Landing Page** (`/`) - S&PS Sourcing & Procurement Services
-2. **Recruitment Nieuws Rapport** (`/news`) - 203 artikelen met Notion integratie
-3. **Over Frank** (`/about`) - Persoonlijke pagina van Frank Lenting
+### **✨ Features**
 
----
-
-## 🎨 **Features**
-
-### ✅ **Unified Navigation**
-- Consistent RECRUITIN branding
-- React Router voor smooth page transitions
-- Mobile-responsive hamburger menu
-- Active state indicators
-
-### ✅ **Executive Recruitment (`/`)**
-- S&PS huisstijl (bruin `#8B6F6F` + blauw `#4A7C9E`)
-- Motion.js animaties
-- Service cards met hover effects
-- Contact formulier
-- Responsive design
-
-### ✅ **Recruitment Nieuws (`/news`)**
-- 203 technische recruitment artikelen
-- **Notion integratie** voor artikel management
-- Top 3 Push naar Notion functionaliteit
-- Search & filter
-- Categorieën met dropdown (Top 3 + "Toon meer")
-- Recruitin huisstijl (charcoal + oranje)
-
-### ✅ **Over Frank (`/about`)**
-- Persoonlijke profiel pagina
-- Werkervaring timeline
-- Skills & certificeringen
-- Contact informatie
-- S&PS huisstijl
+- 🏢 **Executive Recruitment Landing** - Diensten en expertise showcase
+- 👤 **Over Frank Pagina** - Profiel van Frank Lenting, eigenaar S&PS BV
+- 🎨 **S&PS Huisstijl** - Bruin (#8B6F6F) en blauw (#4A7C9E) kleuren
+- 📱 **Fully Responsive** - Optimaal op desktop, tablet en mobile
+- ⚡ **Motion Animations** - Smooth scroll & hover effecten
+- 🧭 **Unified Navigation** - Consistente navigatie tussen pagina's
 
 ---
 
-## 🛠️ **Tech Stack**
+## 🗂️ **Pagina's**
 
-- **Framework:** React 18.3.1
-- **Routing:** React Router DOM 7.12.0
-- **Styling:** Tailwind CSS 4.1.12
-- **Animaties:** Motion (Framer Motion) 12.23.24
-- **Icons:** Lucide React 0.487.0
-- **Build Tool:** Vite 6.3.5
-- **Backend:** Supabase (voor Notion integratie)
+### **1. Executive Recruitment (`/`)**
+- **Huisstijl**: S&PS bruin + blauw
+- **Hero sectie** met glassmorphism stats
+- **6 Service cards**
+- **4-step aanpak** visualisatie
+- **Ervaring showcase**
+- **Contact formulier**
+
+### **2. Over Frank (`/about`)**
+- **Huisstijl**: S&PS bruin + blauw
+- **Hero** met floating stats (15+ jaar, 50+ projecten)
+- **Expertise tags**: 8 skills
+- **Certificeringen**: 4 professionele certificaten
+- **Werkervaring timeline**: S&PS, Vitens, Alliander
+- **Werkwijze sectie**: 3 pijlers
+- **Contact CTA**
+
+---
+
+## 🎨 **Design System**
+
+### **Kleurenpalet (S&PS Huisstijl)**
+```css
+Primair bruin:    #8B6F6F
+Gradient bruin:   #6B5252
+Accent blauw:     #4A7C9E
+Hover blauw:      #3A6C8E
+Background:       #f8f9fa
+Text primair:     #1a1a1a
+Text secundair:   #666666
+```
 
 ---
 
@@ -64,105 +61,45 @@ Dit project combineert drie belangrijke delen van het Recruitin platform:
 
 ```
 /src/app/
-├── App.tsx                           # React Router setup
+├── App.tsx                          # React Router (2 routes)
+├── components/
+│   └── UnifiedHeader.tsx            # Shared navigation
 ├── pages/
 │   ├── ExecutivePage.tsx            # Executive Recruitment landing
-│   ├── NewsPage.tsx                 # Recruitment nieuws rapport
 │   └── AboutPage.tsx                # Over Frank profiel
-├── components/
-│   ├── UnifiedHeader.tsx            # Shared navigation
-│   ├── StatCard.tsx                 # Stats component
-│   ├── CategorySection.tsx          # Nieuws categorieën
-│   ├── TopArticleCard.tsx           # Top 3 artikel cards
-│   └── NotionConfigModal.tsx        # Notion setup modal
-├── hooks/
-│   └── useNotion.ts                 # Notion integratie hook
-└── data/
-    └── newsData.ts                  # 203 recruitment artikelen
+└── styles/
+    ├── fonts.css                    # Font imports
+    ├── index.css                    # Base styles
+    └── theme.css                    # Design tokens
 ```
 
 ---
 
-## 🚀 **Routes**
+## 🔗 **Routes**
 
 | Route | Pagina | Beschrijving |
-|-------|--------|-------------|
-| `/` | Executive Recruitment | S&PS landing page voor Sourcing & Procurement |
-| `/news` | Recruitment Nieuws | Technische recruitment nieuws (203 artikelen) |
-| `/about` | Over Frank | Persoonlijke pagina Frank Lenting |
+|-------|--------|--------------|  
+| `/` | Executive Recruitment | S&PS diensten en aanpak |
+| `/about` | Over Frank | Persoonlijk profiel Frank Lenting |
 
 ---
 
-## 🎨 **Kleurenschema**
+## 📞 **Contact**
 
-### **Executive Recruitment & About**
-- Primair: Bruin `#8B6F6F`
-- Accent: Blauw `#4A7C9E`
-- Gradient: `#8B6F6F` → `#6B5252`
+**Frank Lenting**  
+Eigenaar S&PS BV
 
-### **Recruitment Nieuws**
-- Primair: Charcoal/Grijs `#374151`
-- Accent: Oranje `#EA580C`
-- Gradient: `#374151` → `#1F2937`
+📧 Email: frank@snps.nl  
+📱 Telefoon: +31 6 13072174  
+🔗 LinkedIn: [linkedin.com/in/franklenting](https://www.linkedin.com/in/franklenting)  
+📍 Locatie: Nederland
 
 ---
 
-## 💡 **Key Features per Pagina**
+## 📝 **Licentie**
 
-### **Executive Recruitment**
-- Hero met glassmorphism stats
-- 6 service cards
-- 4-step aanpak sectie
-- Ervaring showcase
-- Contact formulier
-
-### **Recruitment Nieuws**
-- Top 3 van de week
-- Push naar Notion knop
-- Search functionaliteit
-- Dropdown filter per onderwerp
-- Priority categories
-- Sources table
-
-### **Over Frank**
-- Hero met floating stats
-- Expertise tags
-- Certificeringen
-- Werkervaring timeline
-- Werkwijze uitleg
-- Contact CTA
+© 2026 S&PS BV. Alle rechten voorbehouden.
 
 ---
 
-## 📱 **Responsive Design**
-
-Volledige responsive ondersteuning:
-- **Desktop:** lg breakpoints (1024px+)
-- **Tablet:** md breakpoints (768px+)
-- **Mobile:** sm breakpoints (<768px)
-
----
-
-## 🔗 **Integraties**
-
-### **Notion API**
-De nieuws pagina heeft een volledige Notion integratie:
-- Push artikelen naar Notion database
-- Configureerbaar via modal
-- Top 3 batch push
-- Per-artikel push functionaliteit
-
----
-
-## 👨‍💼 **Over**
-
-Gebouwd voor **Recruitin** door Wouter Arts
-
-S&PS BV - Frank Lenting  
-Sourcing & Procurement Services
-
----
-
-## 📄 **License**
-
-© 2026 Recruitin / S&PS BV. Alle rechten voorbehouden.
+**S&P Services - Sourcing & Procurement Expertise** 🏢
